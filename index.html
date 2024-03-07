@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PoseNet</title>
+    <style>
+         body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #B9B4C7;
+            color: #333;
+        }
+
+  	header a, footer a {
+            color: #F2FFE9;
+        }
+        
+        header {
+            background-color: #363062;
+            color: #fff;
+            padding: 2em;
+            text-align: center;
+        }
+
+        #main-content {
+             max-width: 1200px;
+            margin: auto;
+            margin-top:20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        }
+      
+
+        pre {
+            overflow: auto;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 70%;
+            height: auto;
+        }
+
+        blockquote {
+            background: #2d2d2d; /* Darker Gray for Blockquote */
+            border-left: 10px solid #FC6736;
+            margin: 1.5em 10px;
+            padding: 0.5em 10px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #860A35;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #fff; /* Light Text Color for Heading */
+        }
+
+        h2 {
+            font-size: 2.5em;
+            color: #363062; /* Light Text Color for Heading */
+        }
+
+        h3 {
+            font-size: 2em;
+            color: #E64848; /* Light Text Color for Heading */
+        }
+
+        h4 {
+            font-size: 1.8em;
+            color: #436850; /* Light Text Color for Heading */
+        }
+
+        h5 {
+            font-size: 1.5em;
+            color: #436850; /* Light Text Color for Heading */
+        }
+
+        h6 {
+            font-size: 1.2em;
+            color: #436850; /* Light Text Color for Heading */
+        }
+
+        strong {
+            color: #436850;
+        }
+
+        a {
+            color: #363062;
+            transition: color 0.5s;
+        }
+
+        a:hover {
+            color: #f45026;
+        }
+
+  p {
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+  <header>
+        <h1>Sagittal Cervical Spine Landmark Point Detection in X-Ray Using Deep Convolutional Neural Networks</h1>
+    </header>
+
+     <div id="main-content">
+    <h2>Introduction</h2>
+         
+  <p>  I present a framework for the automatic detection of sagittal cervical spine landmark points, a key objective measure for clinicians managing patients with various symptoms. Drawing inspiration from UNet, I introduce PoseNet, an encoder-decoder Convolutional Neural Network (CNN) designed to address the lack of research in this area. To enhance the accuracy of landmark point localization, I critically examine the limitations of commonly used regression loss functions like L1 and L2 losses. In response, I propose a novel loss function tailored to improve performance in challenging scenarios, such as extreme neck poses, variable brightness, illumination conditions, and X-Ray noise. The effectiveness of the proposed framework and loss function is validated using a dataset of X-Ray images, demonstrating precise detection of sagittal cervical spine landmark points even in challenging image conditions.
+</p>
+
+ <p> 
+ This research is the part of <a href="https://www.postureanalysis.com/x-ray-analysis-for-chiropractic/">PostureRay</a>.
+</p>
+
+    	<img src="https://github.com/aliprf/posenet/blob/main/arch.png?raw=true" alt="arch">
+	            
+        
+</div>
+
+
+
+
+<div id="main-content">
+    <h2>Qualitative Analysis</h2>
+    
+     <p> Examples of the sagittal cervical spine landmark point detection using PoseNet trained with IC-Loss </p>
+     
+	<img src="https://github.com/aliprf/posenet/blob/main/all_samples.png?raw=true" alt="Samples">
+</div>
+
+
+
+
+   <div id="main-content">
+    <ul>
+      
+       <li>
+       <strong>
+       	<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9787543">Paper</a>
+       </strong> 
+       </li>   
+       
+       <li>
+       <strong>
+       	<a href="https://www.postureanalysis.com/x-ray-analysis-for-chiropractic/">PostureRay</a>
+       </strong> 
+       </li>   
+       
+    
+    </div>
+    
+
+</body>
+
+</html>
